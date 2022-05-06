@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val helloTextView: TextView=findViewById(R.id.hello_world)
+        val helloTextView: TextView=findViewById(R.id.division_textview)
         helloTextView.text="Hello, debugging!"
         logging()
         division()
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val numerator = 60
         var denominator = 4
         repeat(4) {
-            Log.d(TAG, "$denominator")
+            Thread.sleep(1)
             Log.v(TAG, "${numerator / denominator}")
             denominator--
         }
